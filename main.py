@@ -21,7 +21,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # later restrict to your frontend URL
+    allow_origins=["https://project-management-tool-yclf.onrender.com"],  # later restrict to your frontend URL
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

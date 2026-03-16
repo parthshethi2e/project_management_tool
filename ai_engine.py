@@ -52,3 +52,29 @@ Return ONLY valid JSON in this format:
     result = result.replace("```json", "").replace("```", "").strip()
 
     return result
+
+
+def generate_summary(requirement):
+
+    prompt = f"""
+    Summarize the following project requirement in 3 sentences.
+
+    Requirement:
+    {requirement}
+    """
+
+    url = "https://openrouter.ai/api/v1/chat/completions"
+
+    headers = {
+        "Authorization": f"Bearer {API_KEY}",
+        "Content-Type": "application/json"
+    }
+
+    data = {
+        "model": "openai/gpt-4o-mini",
+        "messages": [{"role": "user", "content": prompt}]
+    }
+
+    response = requests.post(url, headers=headers, json=data)
+
+    return response.json()["choices"][0]["message"]["content"]
