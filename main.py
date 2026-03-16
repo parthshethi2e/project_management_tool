@@ -7,25 +7,22 @@ from employees_api import router as employee_router
 
 app = FastAPI()
 
-# CORS configuration
-# app.add_middleware(
-#     CORSMiddleware,
-#     allow_origins=[
-#         "http://localhost:3000",
-#         "http://localhost:3001"
-#     ],
-#     allow_credentials=True,
-#     allow_methods=["*"],
-#     allow_headers=["*"],
-# )
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://project-management-tool-yclf.onrender.com"],  # later restrict to your frontend URL
+    allow_origins=["https://project-management-tool-yclf.onrender.com"],  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# app.add_middleware(
+#     CORSMiddleware,
+#     allow_origins=["*"],   # allow your frontend
+#     allow_credentials=True,
+#     allow_methods=["*"],
+#     allow_headers=["*"],
+# )
 
 app.include_router(generate_router)
 app.include_router(confirm_router)
