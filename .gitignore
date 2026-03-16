@@ -1,32 +1,64 @@
+# -----------------------
 # Python
+# -----------------------
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
 
-# Virtual environment
-pmt_ai_env/
+# Python caches
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# -----------------------
+# Virtual environments
+# -----------------------
 venv/
+pmt_ai_env/
 .env
 
+# -----------------------
 # Environment variables
-.env
+# -----------------------
+.env.*
+!.env.example
 
-# SQLite database
+# -----------------------
+# Database
+# -----------------------
 *.db
+*.sqlite3
 
-# Node
+# -----------------------
+# Node / Next.js
+# -----------------------
 node_modules/
-
-# Next.js
 .next/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
+# -----------------------
 # Logs
+# -----------------------
 *.log
 
-# MacOS
+# -----------------------
+# OS files
+# -----------------------
 .DS_Store
+Thumbs.db
 
-# IDE
+# -----------------------
+# IDE / Editor
+# -----------------------
 .vscode/
 .idea/
+
+# -----------------------
+# Build / Dist
+# -----------------------
+build/
+dist/
+*.egg-info/
+.eggs/
