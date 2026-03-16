@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+pmt_ai_env/
+venv/
+.env
+
+# Environment variables
+.env
+
+# SQLite database
+*.db
+
+# Node
+node_modules/
+
+# Next.js
+.next/
+
+# Logs
+*.log
+
+# MacOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
